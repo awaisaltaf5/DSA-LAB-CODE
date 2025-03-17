@@ -86,7 +86,7 @@ void QueueType<T>::Dequeue()
     }
     front++;
     if (front > rear)
-    { // Reset queue when all elements are dequeued
+    { 
         front = -1;
         rear = -1;
     }
@@ -122,7 +122,7 @@ void QueueType<T>::Display() const
 // Main function
 int main()
 {
-    QueueType<int> queueInt(5); // Correct instantiation
+    QueueType<int> queueInt(5); 
 
     queueInt.Enqueue(19);
     queueInt.Enqueue(20);
