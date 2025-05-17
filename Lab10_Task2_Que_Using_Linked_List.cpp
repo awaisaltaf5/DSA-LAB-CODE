@@ -22,30 +22,29 @@ private:
     int count;
 };
 
-// Constructor
+
 QueueType::QueueType() {
     front = rear = nullptr;
     count = 0;
 }
 
-// Destructor
+
 QueueType::~QueueType() {
     MakeEmpty();
 }
 
-// Make queue empty
+
 void QueueType::MakeEmpty() {
     while (!IsEmpty()) {
         Dequeue();
     }
 }
 
-// Check if queue is empty
 bool QueueType::IsEmpty() const {
     return front == nullptr;
 }
 
-// Enqueue (insert at rear)
+
 void QueueType::Enqueue(int newItem) {
     Node* newNode = new Node;
     newNode->data = newItem;
